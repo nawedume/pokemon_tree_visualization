@@ -1,0 +1,230 @@
+Index,Name,From,Color,Egg Group 1,Egg Group 2,Shape,Type 1,Type 2,Species
+001,Bulbasaur,,Green,Grass,Monster,Shape 08,Grass type,Poison type,Seed Pokémon
+002,Ivysaur,Bulbasaur,Green,Grass,Monster,Shape 08,Grass type,Poison type,Seed Pokémon
+003,Venusaur,Ivysaur,Green,Grass,Monster,Shape 08,Grass type,Poison type,Seed Pokémon
+004,Charmander,,Red,Monster,Dragon,Shape 06,Fire type,,Lizard Pokémon
+005,Charmeleon,Charmander,Red,Monster,Dragon,Shape 06,Fire type,,Flame Pokémon
+006,Charizard,Charmeleon,Red,Monster,Dragon,Shape 06,Fire type,Flying type,Flame Pokémon
+007,Squirtle,,Blue,Monster,Water 1,Shape 06,Water type,,Tiny Turtle Pokémon
+008,Wartortle,Squirtle,Blue,Monster,Water 1,Shape 06,Water type,,Turtle Pokémon
+009,Blastoise,Wartortle,Blue,Monster,Water 1,Shape 06,Water type,,Shellfish Pokémon
+010,Caterpie,,Green,Bug,,Shape 14,Bug type,,Worm Pokémon
+011,Metapod,Caterpie,Green,Bug,,Shape 02,Bug type,,Cocoon Pokémon
+012,Butterfree,Metapod,White,Bug,,Shape 13,Bug type,Flying type,Butterfly Pokémon
+013,Weedle,,Brown,Bug,,Shape 14,Bug type,Poison type,Hairy Bug Pokémon
+014,Kakuna,Weedle,Yellow,Bug,,Shape 02,Bug type,Poison type,Cocoon Pokémon
+015,Beedrill,Kakuna,Yellow,Bug,,Shape 13,Bug type,Poison type,Poison Bee Pokémon
+016,Pidgey,,Brown,Flying,,Shape 09,Normal type,Flying type,Tiny Bird Pokémon
+017,Pidgeotto,Pidgey,Brown,Flying,,Shape 09,Normal type,Flying type,Bird Pokémon
+018,Pidgeot,Pidgeotto,Brown,Flying,,Shape 09,Normal type,Flying type,Bird Pokémon
+019,Rattata,,Purple,Field,,Shape 08,Normal type,,Mouse Pokémon
+020,Raticate,Rattata,Brown,Field,,Shape 08,Normal type,,Mouse Pokémon
+021,Spearow,,Brown,Flying,,Shape 09,Normal type,Flying type,Tiny Bird Pokémon
+022,Fearow,Spearow,Brown,Flying,,Shape 09,Normal type,Flying type,Beak Pokémon
+023,Ekans,,Purple,Field,Dragon,Shape 02,Poison type,,Snake Pokémon
+024,Arbok,Ekans,Purple,Dragon,Field,Shape 02,Poison type,,Cobra Pokémon
+025,Pikachu,Pichu,Yellow,Fairy,Field,Shape 08,Electric type,,Mouse Pokémon
+026,Raichu,Pikachu,Yellow,Fairy,Field,Shape 06,Electric type,,Mouse Pokémon
+027,Sandshrew,,Yellow,Field,,Shape 06,Ground type,,Mouse Pokémon
+028,Sandslash,Sandshrew,Yellow,Field,,Shape 06,Ground type,,Mouse Pokémon
+029,Nidoran♀,,Blue,Field,Monster,Shape 08,Poison type,,Poison Pin Pokémon
+032,Nidoran♂,,Purple,Field,Monster,Shape 08,Poison type,,Poison Pin Pokémon
+033,Nidorino,Nidoran♂,Purple,Field,Monster,Shape 08,Poison type,,Poison Pin Pokémon
+034,Nidoking,Nidorino,Purple,Field,Monster,Shape 06,Poison type,Ground type,Drill Pokémon
+035,Clefairy,Cleffa,Pink,Fairy,,Shape 06,Fairy type,,Fairy Pokémon
+036,Clefable,Clefairy,Pink,Fairy,,Shape 06,Fairy type,,Fairy Pokémon
+037,Vulpix,,Brown,Field,,Shape 08,Fire type,,Fox Pokémon
+038,Ninetales,Vulpix,Yellow,Field,,Shape 08,Fire type,,Fox Pokémon
+039,Jigglypuff,Igglybuff,Pink,Fairy,,Shape 12,Normal type,Fairy type,Balloon Pokémon
+040,Wigglytuff,Jigglypuff,Pink,Fairy,,Shape 12,Normal type,Fairy type,Balloon Pokémon
+041,Zubat,,Purple,Flying,,Shape 09,Poison type,Flying type,Bat Pokémon
+042,Golbat,Zubat,Purple,Flying,,Shape 09,Poison type,Flying type,Bat Pokémon
+043,Oddish,,Blue,Grass,,Shape 07,Grass type,Poison type,Weed Pokémon
+044,Gloom,Oddish,Blue,Grass,,Shape 12,Grass type,Poison type,Weed Pokémon
+045,Vileplume,Gloom,Red,Grass,,Shape 12,Grass type,Poison type,Flower Pokémon
+046,Paras,,Red,Bug,Grass,Shape 14,Bug type,Grass type,Mushroom Pokémon
+047,Parasect,Paras,Red,Bug,Grass,Shape 14,Bug type,Grass type,Mushroom Pokémon
+048,Venonat,,Purple,Bug,,Shape 12,Bug type,Poison type,Insect Pokémon
+049,Venomoth,Venonat,Purple,Bug,,Shape 13,Bug type,Poison type,Poison Moth Pokémon
+050,Diglett,,Brown,Field,,Shape 05,Ground type,,Mole Pokémon
+051,Dugtrio,Diglett,Brown,Field,,Shape 11,Ground type,,Mole Pokémon
+052,Meowth,,Yellow,Field,,Shape 08,Normal type,,Scratch Cat Pokémon
+053,Persian,Meowth,Yellow,Field,,Shape 08,Normal type,,Classy Cat Pokémon
+054,Psyduck,,Yellow,Field,Water 1,Shape 06,Water type,,Duck Pokémon
+055,Golduck,Psyduck,Blue,Field,Water 1,Shape 06,Water type,,Duck Pokémon
+056,Mankey,,Brown,Field,,Shape 06,Fighting type,,Pig Monkey Pokémon
+057,Primeape,Mankey,Brown,Field,,Shape 06,Fighting type,,Pig Monkey Pokémon
+058,Growlithe,,Brown,Field,,Shape 08,Fire type,,Puppy Pokémon
+059,Arcanine,Growlithe,Brown,Field,,Shape 08,Fire type,,Legendary Pokémon
+060,Poliwag,,Blue,Water 1,,Shape 07,Water type,,Tadpole Pokémon
+061,Poliwhirl,Poliwag,Blue,Water 1,,Shape 12,Water type,,Tadpole Pokémon
+062,Poliwrath,Poliwhirl,Blue,Water 1,,Shape 12,Water type,Fighting type,Tadpole Pokémon
+063,Abra,,Brown,Human-Like,,Shape 06,Psychic type,,Psi Pokémon
+064,Kadabra,Abra,Brown,Human-Like,,Shape 06,Psychic type,,Psi Pokémon
+065,Alakazam,Kadabra,Brown,Human-Like,,Shape 12,Psychic type,,Psi Pokémon
+066,Machop,,Gray,Human-Like,,Shape 06,Fighting type,,Superpower Pokémon
+067,Machoke,Machop,Gray,Human-Like,,Shape 12,Fighting type,,Superpower Pokémon
+068,Machamp,Machoke,Gray,Human-Like,,Shape 12,Fighting type,,Superpower Pokémon
+069,Bellsprout,,Green,Grass,,Shape 12,Grass type,Poison type,Flower Pokémon
+070,Weepinbell,Bellsprout,Green,Grass,,Shape 05,Grass type,Poison type,Flycatcher Pokémon
+071,Victreebel,Weepinbell,Green,Grass,,Shape 05,Grass type,Poison type,Flycatcher Pokémon
+072,Tentacool,,Blue,Water 3,,Shape 10,Water type,Poison type,Jellyfish Pokémon
+073,Tentacruel,Tentacool,Blue,Water 3,,Shape 10,Water type,Poison type,Jellyfish Pokémon
+074,Geodude,,Brown,Mineral,,Shape 04,Rock type,Ground type,Rock Pokémon
+075,Graveler,Geodude,Brown,Mineral,,Shape 12,Rock type,Ground type,Rock Pokémon
+076,Golem,Graveler,Brown,Mineral,,Shape 12,Rock type,Ground type,Megaton Pokémon
+077,Ponyta,,Yellow,Field,,Shape 08,Fire type,,Fire Horse Pokémon
+078,Rapidash,Ponyta,Yellow,Field,,Shape 08,Fire type,,Fire Horse Pokémon
+079,Slowpoke,,Pink,Water 1,Monster,Shape 08,Water type,Psychic type,Dopey Pokémon
+080,Slowbro,Slowpoke,Pink,Water 1,Monster,Shape 06,Water type,Psychic type,Hermit Crab Pokémon
+081,Magnemite,,Gray,Mineral,,Shape 04,Electric type,Steel type,Magnet Pokémon
+082,Magneton,Magnemite,Gray,Mineral,,Shape 11,Electric type,Steel type,Magnet Pokémon
+083,Farfetch'd,,Brown,Flying,Field,Shape 09,Normal type,Flying type,Wild Duck Pokémon
+084,Doduo,,Brown,Flying,,Shape 07,Normal type,Flying type,Twin Bird Pokémon
+085,Dodrio,Doduo,Brown,Flying,,Shape 07,Normal type,Flying type,Triple Bird Pokémon
+086,Seel,,White,Water 1,Field,Shape 03,Water type,,Sea Lion Pokémon
+087,Dewgong,Seel,White,Water 1,Field,Shape 03,Water type,Ice type,Sea Lion Pokémon
+088,Grimer,,Purple,Amorphous,,Shape 04,Poison type,,Sludge Pokémon
+089,Muk,Grimer,Purple,Amorphous,,Shape 04,Poison type,,Sludge Pokémon
+090,Shellder,,Purple,Water 3,,Shape 01,Water type,,Bivalve Pokémon
+091,Cloyster,Shellder,Purple,Water 3,,Shape 01,Water type,Ice type,Bivalve Pokémon
+092,Gastly,,Purple,Amorphous,,Shape 01,Ghost type,Poison type,Gas Pokémon
+093,Haunter,Gastly,Purple,Amorphous,,Shape 04,Ghost type,Poison type,Gas Pokémon
+094,Gengar,Haunter,Purple,Amorphous,,Shape 06,Ghost type,Poison type,Shadow Pokémon
+095,Onix,,Gray,Mineral,,Shape 02,Rock type,Ground type,Rock Snake Pokémon
+096,Drowzee,,Yellow,Human-Like,,Shape 12,Psychic type,,Hypnosis Pokémon
+097,Hypno,Drowzee,Yellow,Human-Like,,Shape 12,Psychic type,,Hypnosis Pokémon
+098,Krabby,,Red,Water 3,,Shape 14,Water type,,River Crab Pokémon
+099,Kingler,Krabby,Red,Water 3,,Shape 14,Water type,,Pincer Pokémon
+100,Voltorb,,Red,Mineral,,Shape 01,Electric type,,Ball Pokémon
+101,Electrode,Voltorb,Red,Mineral,,Shape 01,Electric type,,Ball Pokémon
+102,Exeggcute,,Pink,Grass,,Shape 11,Grass type,Psychic type,Egg Pokémon
+103,Exeggutor,Exeggcute,Yellow,Grass,,Shape 07,Grass type,Psychic type,Coconut Pokémon
+104,Cubone,,Brown,Monster,,Shape 06,Ground type,,Lonely Pokémon
+105,Marowak,Cubone,Brown,Monster,,Shape 06,Ground type,,Bone Keeper Pokémon
+106,Hitmonlee,Tyrogue,Brown,Human-Like,,Shape 12,Fighting type,,Kicking Pokémon
+107,Hitmonchan,Tyrogue,Brown,Human-Like,,Shape 12,Fighting type,,Punching Pokémon
+108,Lickitung,,Pink,Monster,,Shape 06,Normal type,,Licking Pokémon
+109,Koffing,,Purple,Amorphous,,Shape 01,Poison type,,Poison Gas Pokémon
+110,Weezing,Koffing,Purple,Amorphous,,Shape 11,Poison type,,Poison Gas Pokémon
+111,Rhyhorn,,Gray,Field,Monster,Shape 08,Ground type,Rock type,Spikes Pokémon
+112,Rhydon,Rhyhorn,Gray,Field,Monster,Shape 06,Ground type,Rock type,Drill Pokémon
+113,Chansey,Happiny,Pink,Fairy,,Shape 06,Normal type,,Egg Pokémon
+114,Tangela,,Blue,Grass,,Shape 07,Grass type,,Vine Pokémon
+115,Kangaskhan,,Brown,Monster,,Shape 06,Normal type,,Parent Pokémon
+116,Horsea,,Blue,Dragon,Water 1,Shape 05,Water type,,Dragon Pokémon
+117,Seadra,Horsea,Blue,Dragon,Water 1,Shape 05,Water type,,Dragon Pokémon
+118,Goldeen,,Red,Water 2,,Shape 03,Water type,,Goldfish Pokémon
+119,Seaking,Goldeen,Red,Water 2,,Shape 03,Water type,,Goldfish Pokémon
+120,Staryu,,Brown,Water 3,,Shape 05,Water type,,Star Shape Pokémon
+121,Starmie,Staryu,Purple,Water 3,,Shape 05,Water type,Psychic type,Mysterious Pokémon
+122,Mr. Mime,Mime Jr.,Pink,Human-Like,,Shape 12,Psychic type,Fairy type,Barrier Pokémon
+123,Scyther,,Green,Bug,,Shape 13,Bug type,Flying type,Mantis Pokémon
+124,Jynx,Smoochum,Red,Human-Like,,Shape 12,Ice type,Psychic type,Human Shape Pokémon
+125,Electabuzz,Elekid,Yellow,Human-Like,,Shape 06,Electric type,,Electric Pokémon
+126,Magmar,Magby,Red,Human-Like,,Shape 06,Fire type,,Spitfire Pokémon
+127,Pinsir,,Brown,Bug,,Shape 12,Bug type,,Stag Beetle Pokémon
+128,Tauros,,Brown,Field,,Shape 08,Normal type,,Wild Bull Pokémon
+129,Magikarp,,Red,Water 2,Dragon,Shape 03,Water type,,Fish Pokémon
+130,Gyarados,Magikarp,Blue,Water 2,Dragon,Shape 02,Water type,Flying type,Atrocious Pokémon
+131,Lapras,,Blue,Water 1,Monster,Shape 03,Water type,Ice type,Transport Pokémon
+132,Ditto,,Purple,Ditto,,Shape 01,Normal type,,Transform Pokémon
+133,Eevee,,Brown,Field,,Shape 08,Normal type,,Evolution Pokémon
+134,Vaporeon,Eevee,Blue,Field,,Shape 08,Water type,,Bubble Jet Pokémon
+135,Jolteon,Eevee,Yellow,Field,,Shape 08,Electric type,,Lightning Pokémon
+136,Flareon,Eevee,Red,Field,,Shape 08,Fire type,,Flame Pokémon
+137,Porygon,,Pink,Mineral,,Shape 07,Normal type,,Virtual Pokémon
+138,Omanyte,,Blue,Water 1,Water 3,Shape 10,Rock type,Water type,Spiral Pokémon
+139,Omastar,Omanyte,Blue,Water 1,Water 3,Shape 10,Rock type,Water type,Spiral Pokémon
+140,Kabuto,,Brown,Water 1,Water 3,Shape 14,Rock type,Water type,Shellfish Pokémon
+141,Kabutops,Kabuto,Brown,Water 1,Water 3,Shape 06,Rock type,Water type,Shellfish Pokémon
+142,Aerodactyl,,Purple,Flying,,Shape 09,Rock type,Flying type,Fossil Pokémon
+143,Snorlax,Munchlax,Black,Monster,,Shape 12,Normal type,,Sleeping Pokémon
+147,Dratini,,Blue,Water 1,Dragon,Shape 02,Dragon type,,Dragon Pokémon
+148,Dragonair,Dratini,Blue,Water 1,Dragon,Shape 02,Dragon type,,Dragon Pokémon
+149,Dragonite,Dragonair,Brown,Water 1,Dragon,Shape 06,Dragon type,Flying type,Dragon Pokémon
+152,Chikorita,,Green,Monster,Grass,Shape 08,Grass type,,Leaf Pokémon
+153,Bayleef,Chikorita,Green,Monster,Grass,Shape 08,Grass type,,Leaf Pokémon
+154,Meganium,Bayleef,Green,Monster,Grass,Shape 08,Grass type,,Herb Pokémon
+155,Cyndaquil,,Yellow,Field,,Shape 12,Fire type,,Fire Mouse Pokémon
+156,Quilava,Cyndaquil,Yellow,Field,,Shape 08,Fire type,,Volcano Pokémon
+157,Typhlosion,Quilava,Yellow,Field,,Shape 08,Fire type,,Volcano Pokémon
+158,Totodile,,Blue,Water 1,Monster,Shape 06,Water type,,Big Jaw Pokémon
+159,Croconaw,Totodile,Blue,Water 1,Monster,Shape 06,Water type,,Big Jaw Pokémon
+160,Feraligatr,Croconaw,Blue,Water 1,Monster,Shape 06,Water type,,Big Jaw Pokémon
+161,Sentret,,Brown,Field,,Shape 08,Normal type,,Scout Pokémon
+162,Furret,Sentret,Brown,Field,,Shape 08,Normal type,,Long Body Pokémon
+163,Hoothoot,,Brown,Flying,,Shape 09,Normal type,Flying type,Owl Pokémon
+164,Noctowl,Hoothoot,Brown,Flying,,Shape 09,Normal type,Flying type,Owl Pokémon
+165,Ledyba,,Red,Bug,,Shape 09,Bug type,Flying type,Five Star Pokémon
+166,Ledian,Ledyba,Red,Bug,,Shape 09,Bug type,Flying type,Five Star Pokémon
+167,Spinarak,,Green,Bug,,Shape 14,Bug type,Poison type,String Spit Pokémon
+168,Ariados,Spinarak,Red,Bug,,Shape 14,Bug type,Poison type,Long Leg Pokémon
+169,Crobat,Golbat,Purple,Flying,,Shape 13,Poison type,Flying type,Bat Pokémon
+170,Chinchou,,Blue,Water 2,,Shape 03,Water type,Electric type,Angler Pokémon
+171,Lanturn,Chinchou,Blue,Water 2,,Shape 03,Water type,Electric type,Light Pokémon
+176,Togetic,Togepi,White,Fairy,Flying,Shape 12,Fairy type,Flying type,Happiness Pokémon
+177,Natu,,Green,Flying,,Shape 09,Psychic type,Flying type,Tiny Bird Pokémon
+178,Xatu,Natu,Green,Flying,,Shape 09,Psychic type,Flying type,Mystic Pokémon
+179,Mareep,,White,Monster,Field,Shape 08,Electric type,,Wool Pokémon
+180,Flaaffy,Mareep,Pink,Monster,Field,Shape 06,Electric type,,Wool Pokémon
+181,Ampharos,Flaaffy,Yellow,Monster,Field,Shape 06,Electric type,,Light Pokémon
+182,Bellossom,Gloom,Green,Grass,,Shape 12,Grass type,,Flower Pokémon
+183,Marill,Azurill,Blue,Water 1,Fairy,Shape 06,Water type,Fairy type,Aqua Mouse Pokémon
+184,Azumarill,Marill,Blue,Water 1,Fairy,Shape 06,Water type,Fairy type,Aqua Rabbit Pokémon
+185,Sudowoodo,Bonsly,Brown,Mineral,,Shape 12,Rock type,,Imitation Pokémon
+186,Politoed,Poliwhirl,Green,Water 1,,Shape 12,Water type,,Frog Pokémon
+187,Hoppip,,Pink,Fairy,Grass,Shape 06,Grass type,Flying type,Cottonweed Pokémon
+188,Skiploom,Hoppip,Green,Fairy,Grass,Shape 06,Grass type,Flying type,Cottonweed Pokémon
+189,Jumpluff,Skiploom,Blue,Fairy,Grass,Shape 06,Grass type,Flying type,Cottonweed Pokémon
+190,Aipom,,Purple,Field,,Shape 06,Normal type,,Long Tail Pokémon
+191,Sunkern,,Yellow,Grass,,Shape 01,Grass type,,Seed Pokémon
+192,Sunflora,Sunkern,Yellow,Grass,,Shape 12,Grass type,,Sun Pokémon
+193,Yanma,,Red,Bug,,Shape 13,Bug type,Flying type,Clear Wing Pokémon
+194,Wooper,,Blue,Water 1,Field,Shape 07,Water type,Ground type,Water Fish Pokémon
+195,Quagsire,Wooper,Blue,Water 1,Field,Shape 06,Water type,Ground type,Water Fish Pokémon
+196,Espeon,Eevee,Purple,Field,,Shape 08,Psychic type,,Sun Pokémon
+197,Umbreon,Eevee,Black,Field,,Shape 08,Dark type,,Moonlight Pokémon
+198,Murkrow,,Black,Flying,,Shape 09,Dark type,Flying type,Darkness Pokémon
+199,Slowking,Slowpoke,Pink,Monster,Water 1,Shape 06,Water type,Psychic type,Royal Pokémon
+200,Misdreavus,,Gray,Amorphous,,Shape 01,Ghost type,,Screech Pokémon
+202,Wobbuffet,Wynaut,Blue,Amorphous,,Shape 05,Psychic type,,Patient Pokémon
+203,Girafarig,,Yellow,Field,,Shape 08,Normal type,Psychic type,Long Neck Pokémon
+204,Pineco,,Gray,Bug,,Shape 01,Bug type,,Bagworm Pokémon
+205,Forretress,Pineco,Purple,Bug,,Shape 01,Bug type,Steel type,Bagworm Pokémon
+206,Dunsparce,,Yellow,Field,,Shape 02,Normal type,,Land Snake Pokémon
+207,Gligar,,Purple,Bug,,Shape 09,Ground type,Flying type,Flyscorpion Pokémon
+208,Steelix,Onix,Gray,Mineral,,Shape 02,Steel type,Ground type,Iron Snake Pokémon
+209,Snubbull,,Pink,Field,Fairy,Shape 12,Fairy type,,Fairy Pokémon
+210,Granbull,Snubbull,Purple,Field,Fairy,Shape 06,Fairy type,,Fairy Pokémon
+211,Qwilfish,,Gray,Water 2,,Shape 03,Water type,Poison type,Balloon Pokémon
+212,Scizor,Scyther,Red,Bug,,Shape 13,Bug type,Steel type,Pincer Pokémon
+213,Shuckle,,Yellow,Bug,,Shape 14,Bug type,Rock type,Mold Pokémon
+214,Heracross,,Blue,Bug,,Shape 12,Bug type,Fighting type,Single Horn Pokémon
+215,Sneasel,,Black,Field,,Shape 06,Dark type,Ice type,Sharp Claw Pokémon
+216,Teddiursa,,Brown,Field,,Shape 06,Normal type,,Little Bear Pokémon
+217,Ursaring,Teddiursa,Brown,Field,,Shape 06,Normal type,,Hibernator Pokémon
+218,Slugma,,Red,Amorphous,,Shape 02,Fire type,,Lava Pokémon
+219,Magcargo,Slugma,Red,Amorphous,,Shape 02,Fire type,Rock type,Lava Pokémon
+220,Swinub,,Brown,Field,,Shape 08,Ice type,Ground type,Pig Pokémon
+221,Piloswine,Swinub,Brown,Field,,Shape 08,Ice type,Ground type,Swine Pokémon
+222,Corsola,,Pink,Water 1,Water 3,Shape 14,Water type,Rock type,Coral Pokémon
+223,Remoraid,,Gray,Water 1,Water 2,Shape 03,Water type,,Jet Pokémon
+224,Octillery,Remoraid,Red,Water 1,Water 2,Shape 10,Water type,,Jet Pokémon
+225,Delibird,,Red,Water 1,Field,Shape 09,Ice type,Flying type,Delivery Pokémon
+226,Mantine,Mantyke,Purple,Water 1,,Shape 09,Water type,Flying type,Kite Pokémon
+227,Skarmory,,Gray,Flying,,Shape 09,Steel type,Flying type,Armor Bird Pokémon
+228,Houndour,,Black,Field,,Shape 08,Dark type,Fire type,Dark Pokémon
+229,Houndoom,Houndour,Black,Field,,Shape 08,Dark type,Fire type,Dark Pokémon
+230,Kingdra,Seadra,Blue,Water 1,Dragon,Shape 05,Water type,Dragon type,Dragon Pokémon
+231,Phanpy,,Blue,Field,,Shape 08,Ground type,,Long Nose Pokémon
+232,Donphan,Phanpy,Gray,Field,,Shape 08,Ground type,,Armor Pokémon
+233,Porygon2,Porygon,Red,Mineral,,Shape 07,Normal type,,Virtual Pokémon
+234,Stantler,,Brown,Field,,Shape 08,Normal type,,Big Horn Pokémon
+235,Smeargle,,White,Field,,Shape 06,Normal type,,Painter Pokémon
+237,Hitmontop,Tyrogue,Brown,Human-Like,,Shape 06,Fighting type,,Handstand Pokémon
+241,Miltank,,Pink,Field,,Shape 06,Normal type,,Milk Cow Pokémon
+242,Blissey,Chansey,Pink,Fairy,,Shape 12,Normal type,,Happiness Pokémon
+246,Larvitar,,Green,Monster,,Shape 06,Rock type,Ground type,Rock Skin Pokémon
+247,Pupitar,Larvitar,Gray,Monster,,Shape 02,Rock type,Ground type,Hard Shell Pokémon
+248,Tyranitar,Pupitar,Green,Monster,,Shape 06,Rock type,Dark type,Armor Pokémon

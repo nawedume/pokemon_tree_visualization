@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Tree Visualization</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+        }
+
+        #parent-body {
+            display: flex;
+        }
+
+        #filter-container {
+            width: 20%;
+            padding-left: 1em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #data-view-container {
+            width: 20%;
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #tree-container {
+            width: 70%;
+            overflow: hidden;
+        }
+
+        .card {
+            width: 80%;
+            font-family: monospace;
+            align-self: center;
+        }
+
+        .filter {
+            width: 100%;
+            margin-left: 2%;
+        }
+
+        .panel {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: #fefefe;
+        }
+
+        #filter-btn {
+            background-color: rgb(25, 130, 196);
+            color: #fefefe;
+        }
+
+        #reset-btn {
+            background-color: #ecece9;
+        }
+
+        .action-btn {
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+            width: 10em;
+            height: 3em;
+        }
+
+        .action-btn:hover {
+            cursor: pointer;
+        }
+
+        #selection-btns {
+            margin-top: 2em;
+            margin-right: 2em;
+            align-self: end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='parent-body'>
+        <div id='filter-container' class="panel">
+            <div class="card">
+                <h2>Filter for Pokemon: </h2>
+                <select class='filter' id='pokemon-filter' multiple></select>
+            </div>
+            <div class="card">
+                <h2>Filter for Types: </h2>
+                <select class='filter' id='type-filter' multiple></select>
+            </div>
+            <div class="card">
+                <h2>Filter for Moves: </h2>
+                <select class='filter' id='move-filter' multiple></select>
+            </div>
+            <div id='selection-btns'>
+                <button id='reset-btn' class='action-btn'>Reset</button>
+                <button id='filter-btn' class='action-btn'>Filter</button>
+            </div>
+        </div>
+        <div id='tree-container'></div>
+        <div id='data-view-container' class="panel">
+            <div class="card" id="poke-pic"></div>
+            <div class="card" id="type-card"></div>
+            <div class="card" id="stat-card"></div>
+            <div class="card" id="move-card"></div>
+        </div>
+    </div>
+    <script type="module">
+        import * as d3 from "https://cdn.skypack.dev/d3@7";
+
+        /**
+         * Following function is based off the code found: https://observablehq.com/@d3/tree-of-life
+         **/
+        async function load_and_display_tree() {
+            const response = await fetch('/get_tree_data');
+            const data = await response.json();
+
+            const width = 1200;
+            const outerRadius = width / 2;
+            const innerRadius = outerRadius - 170;
+
+            const svg = d3.create("svg")
+                .attr("viewBox", [-outerRadius, -outerRadius, width, width])
+                .attr("font-family", "sans-serif")
+                .attr("font-size", 10);
+
+            // determines separation
+            const cluster = d3.cluster()
+                .size([360, innerRadius])
+                .separation((a, b) => 1);
+
+
+            // construct tree visualization
+            const root = d3.hierarchy(data, d => d.children)
+                .sum(d => d.children ? 0 : 1);
+
+            svg.append("style").text(`
+.link--active {
+  stroke: red !important;
+  stroke-width: 1.5px;
+}
+
+.link-extension--active {
+  stroke-opacity: .6;
+}
+
+.label--active {
+  font-weight: bold;
+}
+
+.poke-text {
+    cursor: pointer;
+}
+`);
+
+            cluster(root);
+
+            function onSelect(e, d) {
+                hovered_id = d.data.id;
+                processSelectedIds();
+            }
+
+            function onDeselect(e, d) {
+                hovered_id = null;
+                processSelectedIds();
+            }
+
+            function mouseclick(active) {
+                return (e, d) => {
+                    fetch(`/get_poke_data/${d.data.id}`)
+                        .then((response) => response.json())
+                        .then(pokeJson => {
+                            const pokemonName = pokeJson.name;
+                            const imageSrc = `https://img.pokemondb.net/sprites/home/normal/${pokemonName}.png`
+                            const pokePicture = document.createElement('img');
+                            pokePicture.setAttribute('src', imageSrc);
+                            pokePicture.setAttribute('alt', pokemonName);
+
+                            const pictureContainer = document.getElementById('poke-pic');
+                            pictureContainer.innerHTML = '';
+                            pictureContainer.appendChild(pokePicture);
+
+
+                            const types = pokeJson.types;
+                            const type = types[0].type.name;
+                            const typeInfo = types.map((typeInfo, index) => [`Type ${index + 1}`, typeInfo.type.name]);
+                            display_data('type-card', "Types", typeInfo);
+
+                            const stats = pokeJson.stats;
+                            const statInfo = stats.map((stat) => [stat.stat.name, stat.base_stat]);
+                            display_data('stat-card', "Stats", statInfo);
+
+                            const moves = pokeJson.moves;
+                            const moveInfo = moves.map((move) => [null, move.move.name]);
+                            display_data('move-card', "Moves", moveInfo);
+                        });
+                }
+            }
+
+            const link = svg.append("g")
+                .attr("fill", "none")
+                .attr("stroke", "#000")
+                .selectAll("path")
+                .data(root.links())
+                .join("path")
+                .each(function (d) { d.target.linkNode = this; })
+                .attr("d", linkConstant)
+                .attr("stroke", d => d.target.color);
+
+
+
+            const text = svg.append("g")
+                .selectAll("text")
+                .data(root.leaves())
+                .join("text")
+                .attr("dy", ".31em")
+                .attr("transform", d => `rotate(${d.x - 90}) translate(${innerRadius + 4},0)${d.x < 180 ? "" : " rotate(180)"}`)
+                .attr("text-anchor", d => d.x < 180 ? "start" : "end")
+                .attr('class', 'poke-text')
+                .text(d => d.data.name.replace(/_/g, " "))
+                .on("mouseover", onSelect)
+                .on("mouseout", onDeselect)
+                .on("click", mouseclick(true));
+
+
+            document.getElementById('tree-container').appendChild(svg.node());
+            return [svg, text];
+        }
+
+        function linkConstant(d) {
+            return linkStep(d.source.x, d.source.y, d.target.x, d.target.y);
+        }
+
+        function linkStep(startAngle, startRadius, endAngle, endRadius) {
+            const c0 = Math.cos(startAngle = (startAngle - 90) / 180 * Math.PI);
+            const s0 = Math.sin(startAngle);
+            const c1 = Math.cos(endAngle = (endAngle - 90) / 180 * Math.PI);
+            const s1 = Math.sin(endAngle);
+            return "M" + startRadius * c0 + "," + startRadius * s0
+                + (endAngle === startAngle ? "" : "A" + startRadius + "," + startRadius + " 0 0 " + (endAngle > startAngle ? 1 : 0) + " " + startRadius * c1 + "," + startRadius * s1)
+                + "L" + endRadius * c1 + "," + endRadius * s1;
+        }
+
+        function display_data(card_id, headerText, items) {
+            const card = document.getElementById(card_id);
+            card.innerHTML = '';
+
+            const header = document.createElement('h2');
+            header.innerText = headerText;
+            card.appendChild(header);
+            const list = document.createElement('ul');
+
+            items.map(([label, value]) => {
+                const item = document.createElement('li');
+                const labelElement = document.createElement('b');
+                labelElement.innerText = label ? label + ': ' : '';
+                const valueElement = document.createElement('span');
+                valueElement.innerText = value;
+
+                item.appendChild(labelElement);
+                item.appendChild(valueElement);
+                list.appendChild(item);
+            })
+            card.appendChild(list);
+        }
+
+        async function load_filter_data(poke_ids, type_ids, move_ids) {
+            fetch('/get_filtered_ids', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ 'poke_ids': poke_ids, 'type_ids': type_ids, 'move_ids': move_ids })
+            }).then((response) => {
+                return response.json()
+            }).then((fjson) => {
+                const ids = fjson.ids;
+                reset();
+                selected_ids = new Set(ids);
+                processSelectedIds();
+            })
+        }
+
+        async function load_meta_data() {
+            fetch('/get_meta_data').then((response) => {
+                return response.json()
+            }).then((metadata) => {
+                const pokemons = metadata.pokemons;
+                const pokemon_select = document.getElementById('pokemon-filter');
+                pokemons.forEach(([id, name]) => {
+                    const option = document.createElement('option');
+                    option.setAttribute('value', id);
+                    option.setAttribute('class', 'pokemon-filter-item')
+                    option.innerText = name;
+                    pokemon_select.appendChild(option);
+                });
+
+                const types = metadata.types;
+                const type_select = document.getElementById('type-filter');
+                types.forEach((name) => {
+                    const option = document.createElement('option');
+                    option.setAttribute('value', name);
+                    option.setAttribute('class', 'type-filter-item')
+                    option.innerText = name;
+                    type_select.appendChild(option);
+                });
+
+                const moves = metadata.moves;
+                const move_select = document.getElementById('move-filter');
+                moves.forEach((move) => {
+                    const option = document.createElement('option');
+                    option.setAttribute('value', move.id);
+                    option.setAttribute('class', 'move-filter-item')
+                    option.innerText = move.name;
+                    move_select.appendChild(option);
+                });
+            })
+        }
+
+        document.getElementById('filter-btn').addEventListener('click', (e) => {
+            const pitems = document.getElementsByClassName('pokemon-filter-item');
+            const poke_ids = []
+            for (let i = 0; i < pitems.length; i++) {
+                const item = pitems[i];
+                if (item.selected) {
+                    poke_ids.push(parseInt(item.value));
+                }
+            }
+
+            const titems = document.getElementsByClassName('type-filter-item');
+            const type_ids = []
+            for (let i = 0; i < titems.length; i++) {
+                const item = titems[i];
+                if (item.selected) {
+                    type_ids.push(item.value)
+                }
+            }
+
+            const mitems = document.getElementsByClassName('move-filter-item');
+            const move_ids = []
+            for (let i = 0; i < mitems.length; i++) {
+                const item = mitems[i];
+                if (item.selected) {
+                    move_ids.push(parseInt(item.value));
+                }
+            }
+
+            if (poke_ids.length + type_ids.length + move_ids.length != 0) {
+                load_filter_data(poke_ids, type_ids, move_ids);
+            }
+        });
+
+        document.getElementById('reset-btn').addEventListener('click', (e) => {
+            function resetSelectById(domId) {
+                const options = document.getElementById(domId).options;
+                for (let i = 0; i < options.length; i++) {
+                    options[i].selected = false;
+                }
+            }
+
+            resetSelectById('pokemon-filter');
+            resetSelectById('type-filter');
+            resetSelectById('move-filter');
+
+            selected_ids = new Set();
+            processSelectedIds();
+        });
+
+        function reset() {
+            leaf_nodes.each((d) => changeHighLight(null, d, false));
+        }
+
+        function changeHighLight(event, d, active) {
+            d3.select(this).classed("label--active", active);
+            d3.select(d.linkExtensionNode).classed("link-extension--active", active).raise();
+            do d3.select(d.linkNode).classed("link--active", active).raise();
+            while (d = d.parent);
+        };
+
+        function processSelectedIds() {
+            reset();
+            leaf_nodes.filter((d, i) => selected_ids.has(d.data.id) || d.data.id === hovered_id)
+                .each((d) => changeHighLight(null, d, true));
+        }
+
+        let leaf_nodes = null;
+        let selected_ids = new Set();
+        let hovered_id = null;
+        load_and_display_tree()
+            .then(([s, l, f]) => {
+                leaf_nodes = l;
+            });
+
+        load_meta_data();
+    </script>
+</body>
+
+</html>
