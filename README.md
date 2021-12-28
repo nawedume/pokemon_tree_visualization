@@ -2,7 +2,7 @@
 
 ## About
 
-A visualization of Pokemon genetic information.
+A visualization of Pokemon genetic information. (http://vis.poketree.io)
 
 This visualization is a Phylogenetic tree of Pokemon. It attempts to group Pokemon with similar "genetic traits" together, and allows a user to query for Pokemon data.
 
